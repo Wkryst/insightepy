@@ -13,6 +13,11 @@ class API(object):
         self.pool = HTTPConnectionPool(rs.HOST_ADDR + ':' + rs.HOST_PORT)
 
     def make_request(self, method, url, fields):
+        # adding user information to field
+
+        fields['cid'] = self._cid
+        fields['csecret'] = self._csecret
+        fields['authtoken'] = self._authtoken
         r = self.pool.request(method, url, fields=fields)
         try:
             return json.loads(r.data)

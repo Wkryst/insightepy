@@ -1,2 +1,4 @@
-HOST_ADDR = 'localhost'
-HOST_PORT = '8000'
+HOST_ADDR = '151.80.41.13'
+HOST_PORT = '9000'
+# HOST_ADDR = 'localhost'
+# HOST_PORT = '8000'
